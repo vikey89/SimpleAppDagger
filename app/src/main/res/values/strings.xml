@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SimpleAppDagger</string>
+    <string name="go_to_categories">Show Categories</string>
+</resources>
