@@ -1,11 +1,11 @@
-package dev.vikey89.categories.view
+package dev.vikey89.categories.ui
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import dev.vikey89.categories.R
-import dev.vikey89.categories.data.Category
+import dev.vikey89.core.data.Category
 import kotlinx.android.synthetic.main.item_category.view.category_id
 import kotlinx.android.synthetic.main.item_category.view.category_name
 

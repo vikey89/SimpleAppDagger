@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SimpleAppDagger</string>
     <string name="go_to_categories">Show Categories</string>
+    <string name="go_to_retailers">Show Retailers</string>
 </resources>

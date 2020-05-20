@@ -1,3 +1,5 @@
 rootProject.name='SimpleAppDagger'
 include ':app'
 include ':categories'
+include ':core'
+include ':retailers'

@@ -1,4 +1,4 @@
-package dev.vikey89.categories.data
+package dev.vikey89.core.data
 
 class CategoriesRepositoryImpl : CategoriesRepository {
 
