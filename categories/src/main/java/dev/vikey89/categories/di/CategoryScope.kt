@@ -1,4 +1,4 @@
-package dev.vikey89.categories.utils
+package dev.vikey89.categories.di
 
 import javax.inject.Scope
 

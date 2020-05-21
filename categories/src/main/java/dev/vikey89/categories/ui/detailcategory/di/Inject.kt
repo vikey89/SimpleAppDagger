@@ -1,14 +1,16 @@
-package dev.vikey89.categories.utils
+package dev.vikey89.categories.ui.detailcategory.di
 
 import dev.vikey89.categories.di.component.DaggerCategoryComponent
-import dev.vikey89.categories.ui.CategoriesActivity
+import dev.vikey89.categories.ui.detailcategory.DetailCategoryFragment
 import dev.vikey89.core.di.provideCoreComponent
 
-fun CategoriesActivity.inject() {
+fun DetailCategoryFragment.inject() {
 
     DaggerCategoryComponent
         .builder()
         .coreComponent(provideCoreComponent())
         .build()
+        .detailCategoryComponent()
+        .create()
         .inject(this)
 }
