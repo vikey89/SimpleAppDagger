@@ -1,4 +1,4 @@
-package dev.vikey89.categories.ui
+package dev.vikey89.categories.ui.listcategories
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -7,7 +7,7 @@ import dev.vikey89.core.data.CategoriesRepository
 import dev.vikey89.core.data.Category
 import javax.inject.Inject
 
-class CategoriesViewModel @Inject constructor(
+class ListCategoriesViewModel @Inject constructor(
     private val categoryRepository: CategoriesRepository
 ) : ViewModel() {
 

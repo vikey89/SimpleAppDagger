@@ -19,7 +19,7 @@
         </activity>
 
         <activity
-            android:name="dev.vikey89.categories.ui.CategoriesActivity"
+            android:name="dev.vikey89.categories.ui.CategoryActivity"
             android:parentActivityName=".MainActivity" />
 
         <activity

@@ -1,4 +1,4 @@
-package dev.vikey89.categories.ui
+package dev.vikey89.categories.ui.listcategories
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,10 +6,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import dev.vikey89.categories.R
 import dev.vikey89.core.data.Category
-import kotlinx.android.synthetic.main.item_category.view.category_id
 import kotlinx.android.synthetic.main.item_category.view.category_name
 
-class CategoriesAdapter : RecyclerView.Adapter<CategoryViewHolder>() {
+class ListCategoriesAdapter(
+    private val onClickListener: (id: Int) -> Unit
+) : RecyclerView.Adapter<CategoryViewHolder>() {
 
     private val categories = mutableListOf<Category>()
 
@@ -24,7 +25,7 @@ class CategoriesAdapter : RecyclerView.Adapter<CategoryViewHolder>() {
 
     override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
         val category = categories[position]
-        holder.fill(category)
+        holder.fill(category, onClickListener)
     }
 
     fun updateCategories(newCategories: List<Category>) {
@@ -33,13 +34,16 @@ class CategoriesAdapter : RecyclerView.Adapter<CategoryViewHolder>() {
     }
 }
 
-class CategoryViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
+class CategoryViewHolder(private val view: View) :
+    RecyclerView.ViewHolder(view) {
 
-    private val idView by lazy { view.category_id }
     private val nameView by lazy { view.category_name }
 
-    fun fill(category: Category) {
-        idView.text = category.id.toString()
+    fun fill(category: Category, onClickListener: (id: Int) -> Unit) {
+        view.setOnClickListener {
+            onClickListener(category.id)
+        }
+
         nameView.text = category.name
     }
 }
