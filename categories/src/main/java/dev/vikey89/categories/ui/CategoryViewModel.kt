@@ -3,11 +3,9 @@ package dev.vikey89.categories.ui
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import dev.vikey89.categories.di.CategoryScope
 import dev.vikey89.core.ext.default
 import javax.inject.Inject
 
-@CategoryScope
 class CategoryViewModel @Inject constructor() : ViewModel() {
 
     private val _statusView = MutableLiveData<StatusView>().default(StatusView.ListCategories)

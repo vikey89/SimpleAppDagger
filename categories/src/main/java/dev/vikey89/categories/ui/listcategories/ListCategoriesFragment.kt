@@ -22,8 +22,6 @@ class ListCategoriesFragment : Fragment() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
-
-    @Inject
     lateinit var categoryViewModel: CategoryViewModel
 
     private lateinit var viewModel: ListCategoriesViewModel
@@ -48,6 +46,7 @@ class ListCategoriesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        categoryViewModel = ViewModelProvider(requireActivity(), viewModelFactory).get(CategoryViewModel::class.java)
         viewModel = ViewModelProvider(this, viewModelFactory).get(ListCategoriesViewModel::class.java)
 
         recycler_view_categories.setup()

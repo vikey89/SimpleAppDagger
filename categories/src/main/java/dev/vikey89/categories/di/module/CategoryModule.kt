@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModelProvider
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
-import dev.vikey89.categories.di.CategoryScope
 import dev.vikey89.categories.ui.CategoryViewModel
 import dev.vikey89.core.ViewModelFactory
 import dev.vikey89.core.ViewModelKey
@@ -16,7 +15,6 @@ abstract class CategoryModule {
     @Binds
     internal abstract fun bindsViewModelFactory(factory: ViewModelFactory): ViewModelProvider.Factory
 
-    @CategoryScope
     @Binds
     @IntoMap
     @ViewModelKey(CategoryViewModel::class)
